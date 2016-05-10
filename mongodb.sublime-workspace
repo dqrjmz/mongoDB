@@ -1,0 +1,419 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"onm",
+				"onmouseup〔function〕"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"dif",
+				"diffY〔variable〕"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"di",
+				"diffX"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"wr",
+				"word-wrap"
+			],
+			[
+				"text-",
+				"text-overflow"
+			],
+			[
+				"te",
+				"table-cell"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"fnt",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"in",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "mongodb.md",
+			"settings":
+			{
+				"buffer_size": 200,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var mongodb = require('mongodb');\nvar server = new mongodb.Server('localhost', 27017, {\n  auto_reconnect: true\n});\nvar db = new mongodb.Db('mydb', server, {\n  safe: true\n});\n\n//连接db\ndb.open(function(err, db) {\n  if (!err) {\n    console.log('connect db');\n    // 连接Collection（可以认为是mysql的table）\n    // 第1种连接方式\n    // db.collection('mycoll',{safe:true}, function(err, collection){\n    //     if(err){\n    //         console.log(err);\n    //     }\n    // });\n    // 第2种连接方式\n    db.createCollection('mycoll', {\n      safe: true\n    }, function(err, collection) {\n      if (err) {\n        console.log(err);\n      } else {\n        //新增数据\n        // var tmp1 = {id:'1',title:'hello',number:1};\n        //          collection.insert(tmp1,{safe:true},function(err, result){\n        //              console.log(result);\n        //          }); \n        //更新数据\n        // collection.update({title:'hello'}, {$set:{number:3}}, {safe:true}, function(err, result){\n        //     console.log(result);\n        // });\n        // 删除数据\n        // collection.remove({title:'hello'},{safe:true},function(err,result){\n        //                   console.log(result);\n        //               });\n\n        // console.log(collection);\n        // 查询数据\n        var tmp1 = {\n          title: 'hello'\n        };\n        var tmp2 = {\n          title: 'world'\n        };\n        collection.insert([tmp1, tmp2], {\n          safe: true\n        }, function(err, result) {\n          console.log(result);\n        });\n        collection.find().toArray(function(err, docs) {\n          console.log('find');\n          console.log(docs);\n        });\n        collection.findOne(function(err, doc) {\n          console.log('findOne');\n          console.log(doc);\n        });\n      }\n\n    });\n    // console.log('delete ...');\n    // //删除Collection\n    // db.dropCollection('mycoll',{safe:true},function(err,result){\n\n    //           if(err){\n\n    //         console.log('err:');\n    //         console.log(err);\n    //     }else{\n    //         console.log('ok:');\n    //         console.log(result);\n    //     }\n    //       }); \n  } else {\n    console.log(err);\n  }\n});",
+			"file": "app.js",
+			"file_size": 2546,
+			"file_write_time": 131069288192666296,
+			"settings":
+			{
+				"buffer_size": 2131,
+				"line_ending": "Windows",
+				"name": "app.js"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 160.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"git s",
+				"Git: Show"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"pin",
+				"Package Control: Install Package"
+			],
+			[
+				"e",
+				"Plugin Development: Profile Events"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 642.0,
+		"history":
+		[
+			"import  urllib.request,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/D/mongoDB/mongo.config",
+		"/E/mongoDB/mongodb.md",
+		"/E/我毕业啦/毕业项目/views/index.jade",
+		"/E/我毕业啦/毕业项目/app.js",
+		"/E/我毕业啦/毕业项目/readme.md",
+		"/C/Users/Administrator/.ssh/id_rsa",
+		"/C/Users/Administrator/.ssh/id_rsa.pub",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/我毕业啦/毕业项目/node_modules/bootstrap/package.json",
+		"/E/nodejs/nodejs-first/http/call_apply.js",
+		"/E/nodejs/nodejs-first/server.js",
+		"/E/nodejs/nodejs-first/http/context.js",
+		"/E/css3/sd_tab/3d.html",
+		"/E/react/react-demos/README.md",
+		"/E/react/node_modules/webpack/package.json",
+		"/C/Users/Administrator/Desktop/5653c4f900013c5900000000/css/normal_mobile.css",
+		"/C/Users/Administrator/Desktop/5653c4f900013c5900000000/css/normal_flex.css",
+		"/C/Users/Administrator/Desktop/5653c4f900013c5900000000/README.md",
+		"/E/js效果揭秘/drag/drag.html",
+		"/E/js效果揭秘/lunbaotu/lunbotu.html",
+		"/E/js效果揭秘/lunbaotu/css/lunbotu.css",
+		"/E/js效果揭秘/lunbaotu/js/mod1.js",
+		"/E/js效果揭秘/lunbaotu/js/lunbotu.js",
+		"/E/js效果揭秘/jquery/README.md",
+		"/E/git/learn.sublime-project",
+		"/E/前端练习/焦点图.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/E/git/learngit/git第二课.txt",
+		"/E/移动端与pc端css布局/弹性伸缩布局/弹性伸缩布局2-混合版本.html",
+		"/E/移动端与pc端css布局/弹性伸缩布局/弹性伸缩布局1.html",
+		"/E/js组件大全/轮播组件/1.html",
+		"/E/git/learngit/git第一课.txt",
+		"/E/git/learngit/LICENSE",
+		"/E/git/git第二课.txt",
+		"/E/git/git第一课.txt",
+		"/C/Users/Administrator/Desktop/1.html"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"创建读取流，将数据通过数据管道进行压缩，再将文件写到压缩文件中"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "mongodb.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"is_xml": false,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1305,
+								1305
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_name": "app.js",
+							"is_xml": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 30.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 140.0
+	},
+	"pinned_build_system": "",
+	"project": "mongodb.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "git",
+		"selected_items":
+		[
+			[
+				"git",
+				"E:\\git\\git.sublime-project"
+			],
+			[
+				"",
+				"E:\\nodejs\\express\\express.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
