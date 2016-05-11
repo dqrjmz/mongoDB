@@ -83,26 +83,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "mongodb.md",
-			"settings":
-			{
-				"buffer_size": 200,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "var mongodb = require('mongodb');\nvar server = new mongodb.Server('localhost', 27017, {\n  auto_reconnect: true\n});\nvar db = new mongodb.Db('mydb', server, {\n  safe: true\n});\n\n//连接db\ndb.open(function(err, db) {\n  if (!err) {\n    console.log('connect db');\n    // 连接Collection（可以认为是mysql的table）\n    // 第1种连接方式\n    // db.collection('mycoll',{safe:true}, function(err, collection){\n    //     if(err){\n    //         console.log(err);\n    //     }\n    // });\n    // 第2种连接方式\n    db.createCollection('mycoll', {\n      safe: true\n    }, function(err, collection) {\n      if (err) {\n        console.log(err);\n      } else {\n        //新增数据\n        // var tmp1 = {id:'1',title:'hello',number:1};\n        //          collection.insert(tmp1,{safe:true},function(err, result){\n        //              console.log(result);\n        //          }); \n        //更新数据\n        // collection.update({title:'hello'}, {$set:{number:3}}, {safe:true}, function(err, result){\n        //     console.log(result);\n        // });\n        // 删除数据\n        // collection.remove({title:'hello'},{safe:true},function(err,result){\n        //                   console.log(result);\n        //               });\n\n        // console.log(collection);\n        // 查询数据\n        var tmp1 = {\n          title: 'hello'\n        };\n        var tmp2 = {\n          title: 'world'\n        };\n        collection.insert([tmp1, tmp2], {\n          safe: true\n        }, function(err, result) {\n          console.log(result);\n        });\n        collection.find().toArray(function(err, docs) {\n          console.log('find');\n          console.log(docs);\n        });\n        collection.findOne(function(err, doc) {\n          console.log('findOne');\n          console.log(doc);\n        });\n      }\n\n    });\n    // console.log('delete ...');\n    // //删除Collection\n    // db.dropCollection('mycoll',{safe:true},function(err,result){\n\n    //           if(err){\n\n    //         console.log('err:');\n    //         console.log(err);\n    //     }else{\n    //         console.log('ok:');\n    //         console.log(result);\n    //     }\n    //       }); \n  } else {\n    console.log(err);\n  }\n});",
-			"file": "app.js",
-			"file_size": 2546,
-			"file_write_time": 131069288192666296,
-			"settings":
-			{
-				"buffer_size": 2131,
-				"line_ending": "Windows",
-				"name": "app.js"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -111,10 +91,42 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 160.0,
-		"last_filter": "Package Control: in",
+		"height": 375.0,
+		"last_filter": "git  push",
 		"selected_items":
 		[
+			[
+				"git  push",
+				"Git: Push"
+			],
+			[
+				"git  s",
+				"Git: Status"
+			],
+			[
+				"git  pus",
+				"Git: Push"
+			],
+			[
+				"git  co",
+				"Git: Commit"
+			],
+			[
+				"git  coo",
+				"Git: Commit history"
+			],
+			[
+				"git  add",
+				"Git: Add All"
+			],
+			[
+				"git ",
+				"Git: Remote"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
 			[
 				"Package Control: in",
 				"Package Control: Install Package"
@@ -173,11 +185,14 @@
 	},
 	"expanded_folders":
 	[
+		"/E/mongoDB"
 	],
 	"file_history":
 	[
-		"/D/mongoDB/mongo.config",
+		"/E/mongoDB/.gitignore",
+		"/E/mongoDB/app.js",
 		"/E/mongoDB/mongodb.md",
+		"/D/mongoDB/mongo.config",
 		"/E/我毕业啦/毕业项目/views/index.jade",
 		"/E/我毕业啦/毕业项目/app.js",
 		"/E/我毕业啦/毕业项目/readme.md",
@@ -249,72 +264,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "mongodb.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 200,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								71,
-								71
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"is_xml": false,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1305,
-								1305
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"auto_name": "app.js",
-							"is_xml": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -360,6 +311,18 @@
 	"output.git":
 	{
 		"height": 140.0
+	},
+	"output.git-commit":
+	{
+		"height": 120.0
+	},
+	"output.git-init":
+	{
+		"height": 120.0
+	},
+	"output.git-push":
+	{
+		"height": 120.0
 	},
 	"pinned_build_system": "",
 	"project": "mongodb.sublime-project",
@@ -411,7 +374,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 188.0,
+	"side_bar_width": 343.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
