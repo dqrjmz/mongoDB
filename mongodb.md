@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 数据管理：
 人工管理->文件管理->数据库
 
@@ -25,6 +26,8 @@ nosql数据库兴起的背景：云计算和大数据的崛起，所诞生的新
 
 
 
+=======
+>>>>>>> 49a65c6bac51cabb780e3c8ec143262121044f12
 mongodb
 概念：
 MongoDB
@@ -36,7 +39,11 @@ mongo
 数据均衡
 
 mongodb的
+<<<<<<< HEAD
         1.安装：文件下载，（如果data数据路径有错就会引起程序有错）
+=======
+        1.安装：文件下载
+>>>>>>> 49a65c6bac51cabb780e3c8ec143262121044f12
         2.配置：数据保存路径data/db 
         3.将mongodb设置为windows服务，可以随着windows启动而开启
          （也可以通过手工命令行启动）
@@ -47,9 +54,12 @@ mongodb的
 删除当前数据库：db.DropDataBase()
 创建数据库：use 数据库名 db.集合名（表名）.insert({x:1}) 即可
 
+<<<<<<< HEAD
 数据集：表
 文档：行
 
+=======
+>>>>>>> 49a65c6bac51cabb780e3c8ec143262121044f12
 # mongdb中的数据集合就是关系数据库的表
 mongodb的数据库操作：【增，删，改，查】
 查询集合（表）：show collections/tables
@@ -88,6 +98,7 @@ _id索引：自动生成
                   如果指定数组则按最小的时间进行删除
                   不能是复合索引
   全文（文本）索引：
+<<<<<<< HEAD
     创建全文索引：db.集合名（表名）.ensureIndex({key:'text'})
                   db.集合名（表名）.ensureIndex({key:'text',key:'text'})
                   key:对应的字段上
@@ -112,3 +123,6 @@ _id索引：自动生成
           2.指定索引的唯一性：db.集合名（表名）.uniqueensureIndex({key:'text'},{unique:true/false})
           3.索引的稀疏性：
           db.集合名（表名）.uniqueensureIndex({key:'text'},{sparse:true/false})
+=======
+  地理位置索引：
+>>>>>>> 49a65c6bac51cabb780e3c8ec143262121044f12
